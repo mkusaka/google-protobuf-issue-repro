@@ -1,0 +1,30 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    google-protobuf (4.26.0)
+      rake (>= 13)
+    google-protobuf (4.26.0-aarch64-linux)
+      rake (>= 13)
+    google-protobuf (4.26.0-arm64-darwin)
+      rake (>= 13)
+    google-protobuf (4.26.0-x86-linux)
+      rake (>= 13)
+    google-protobuf (4.26.0-x86_64-darwin)
+      rake (>= 13)
+    google-protobuf (4.26.0-x86_64-linux)
+      rake (>= 13)
+    rake (13.2.1)
+
+PLATFORMS
+  aarch64-linux
+  arm64-darwin
+  ruby
+  x86-linux
+  x86_64-darwin
+  x86_64-linux
+
+DEPENDENCIES
+  google-protobuf (= 4.26.0)
+
+BUNDLED WITH
+   2.5.16
