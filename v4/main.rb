@@ -4,12 +4,19 @@ require 'google/protobuf'
 
 require_relative './addressbook_pb'
 
-person = Tutorial::Person.new(phone_numbers: ["123-456-7890", "987-654-3210"])
+person = Tutorial::Person.new(
+  phone_numbers: [
+    Tutorial::PhoneNumber.new(type: Tutorial::PhoneType::HOME),
+    Tutorial::PhoneNumber.new(number: "987-654-3210"),
+    Tutorial::PhoneNumber.new(number: "987-654-3210", type: Tutorial::PhoneType::MOBILE),
+    Tutorial::PhoneNumber.new(number: "987-654-3210", type: Tutorial::PhoneType::HOME),
+  ]
+)
 
 puts "person#to_h"
 puts person.to_h
 puts "persion#phone_numbers"
-puts person.phone_numbers
+puts person.phone_numbers[1].type
 
 number_empty_person = Tutorial::Person.new(phone_numbers: [])
 
@@ -24,3 +31,5 @@ puts "number_default_person#to_h"
 puts number_default_person.to_h
 puts "number_default_person#phone_numbers"
 puts number_default_person.phone_numbers.inspect
+
+# binding.pry
